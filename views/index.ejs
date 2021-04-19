@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="../public/index.css">
+        
+        <title>Home</title>
+    </head>
+    <body id="body-pd">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <div class="nav__toggle"  id="nav-toggle">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                        <a href="#" class="nav__logo">1805669</a>
+                    </div>
+                    <div class="nav__list">
+                        <a href="/" class="nav__link">
+                            <img src="../public/home_white_24dp.svg"> 
+                            <span class="nav__name">Home</span>
+                        </a>
+                        <a href="/aboutme" class="nav__link">
+                            <img src="../public/face_white_24dp.svg">
+                            <span class="nav__name">About Me</span>
+                        </a>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-container">
+            <div class="main-top">
+                <h1>My Meetings</h1>
+            </div>
+            <div class="main-input-container">
+                <div class="main-input">
+                    <input type="text" class="no-outline search" placeholder="Search" onkeyup="search()" id="meet-search">
+                    <label for="from">From: </label><input type="date" class="no-outline" id="from" placeholder="dd/mm/yyyy">
+                    <label for="to">To: </label><input type="date" class="no-outline" id="to">
+                </div>
+            </div>
+            <div class="main-data">
+                <table id="main-table">
+                    <tr>
+                        <th>Sl. no.</th>
+                        <th>Meeting Name</th>
+                        <th>No of People attending</th>
+                        <th>Date</th>
+                        <th>Start time</th>
+                        <th>End time</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr id="add-data">
+                        <td id="col1"></td>
+                        <td id="col2">
+                            <input type="text" class="no-outline1" id="i2" required>
+                        </td>
+                        <td id="col3">
+                            <input type="number" class="no-outline1" id="i3" required>
+                        </td>
+                        <td id="col4">
+                            <input type="date" class="no-outline1" id="i4" required>
+                        </td>
+                        <td id="col5">
+                            <input type="time" class="no-outline1" id="i5" required>
+                        </td>
+                        <td id="col6">
+                            <input type="time" class="no-outline1" id="i6" required>
+                        </td>
+                        <td id="col7">
+                            <button type="submit" class="btnadd" onclick="addRows()" >Add</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- ===== MAIN JS ===== -->
+        <script src="../public/index.js"></script>
+    </body>
+</html>
